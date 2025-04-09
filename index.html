@@ -8,38 +8,59 @@
   
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
 
-
-  <!-- Sign-up form start -->
-
-  Stay updated!
-
-  Join 60,000+ product managers receiving monthly updates on:
-
-  Product discovery and building what matters
-  Measuring to ensure updates are a success
-  And much more!
-
-  Email address
-  email@company.com
-
-  Subscribe to monthly newsletter
-
-  <!-- Sign-up form end -->
-
-  <!-- Success message start -->
-
-  Thanks for subscribing!
-
-  A confirmation email has been sent to ash@loremcompany.com. 
-  Please open it and click the button inside to confirm your subscription.
-
-  Dismiss message
-
-  <!-- Success message end -->
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+</head>
+<body>
+<main class="newsletter">
+  <div class="newsletter__signup-card">
+    <figure class="signup-card__image">
+    </figure>
+    <div class="signup-card__form">
+      <div class="signup-card__form-details">
+        <h2 class="signup-card__form-heading">Stay updated!</h3>
+        <p class="signup-card__form-description">
+          Join 60,000+ product managers receiving monthly updates on:
+        </p>
+        <ul class="signup-card__form-feature-list">
+          <li class="signup-card__form-feature">  
+            Product discovery and building what matters
+          </li>
+          <li class="signup-card__form-feature">
+            Measuring to ensure updates are a success
+          </li>
+          <li class="signup-card__form-feature">
+            And much more!
+          </li>
+        </ul>
+      </div>
+      <div class="signup-card__form-data">
+        <form id="form" class="signup-card__form-data" novalidate>
+          <div class="signup-card__form-email">
+            <section class="signup-card__form-email">
+              <label for="email" class="signup-card__form-email-label">Email address</label>
+              <span aria-live="polite" id="email-error" class="signup-card__form-email-error"></span>
+            </section>
+            <input id="email" name="email" type="email" class="signup-card__form-email-input" placeholder="email@company.com"/>
+          </div>
+          <button class="signup-card__form-button">
+             Subscribe to monthly newsletter
+          </button>
+        </form>
+      </div>
+    </div>
   </div>
+  <div class="success-card" style="display: none;">
+    <img src="" alt="sucess image">
+    <h1 class="Success-card__heading">
+      Thanks for subscribing!
+    </h1>
+    <p class="Success-card__message">
+      A confirmation email has been sent to ash@loremcompany.com. 
+      Please open it and click the button inside to confirm your subscription.
+    </p>
+    <buttton class="success-card__dismiss-button">
+      Dismiss message
+    </buttton>
+  </div>
+</main>
 </body>
 </html>
