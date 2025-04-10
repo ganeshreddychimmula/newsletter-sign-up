@@ -66,23 +66,36 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
+### Email validation Regex string
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 ```
+Explanation of the regex:
+- ^ — matches the start of the string.
+
+- [^\s@]+ — ensures at least one character that is not whitespace or an @.
+
+- @ — matches the @ symbol exactly once.
+
+- [^\s@]+ — ensures domain contains at least one character.
+
+- \. — matches a literal period (.).
+
+- [^\s@]+ — ensures domain extension contains at least one character.
+
+- $ — matches the end of the string.
+
+The regex component [^\s@]+ can be broken down as follows:
+
+- [...] (Character Class): This part tells the regex engine that it should match any one character listed inside the brackets.
+
+- ^ (Negation): When placed at the beginning of a character class, the caret (^) negates the set. This means "match any character that is NOT in the following list."
+
+- \s (Whitespace): This matches any whitespace character (spaces, tabs, line breaks, etc.).
+
+- @ (Literal Character): This matches the literal "@" symbol.
+
+- + (Quantifier): The plus sign indicates "one or more" occurrences of the preceding element. In this case, it means one or more characters that are not whitespace or "@".
 
 If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
 
