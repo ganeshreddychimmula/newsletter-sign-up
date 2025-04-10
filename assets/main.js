@@ -2,23 +2,37 @@ let newsletterCard = document.querySelector(".newsletter__signup-card");
 let successCard = document.querySelector(".success-card");
 let signUpButton = document.querySelector("#signup-button");
 let dismissButton = document.querySelector('#dismiss');
-let errorMessage = document.querySelector('#email-error');
+let errorBox = document.querySelector('#email-error');
 let emailInputElement = document.querySelector('#email');
 let emailValue = "";
 
 // Save email value on renders
 emailInputElement.addEventListener('input', function (e) {
     emailValue = e.target.value;
-    console.log(emailValue);
 })
+
+// Validate email
+function validateEmail(email) {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+  }
+
 
 signUpButton.addEventListener('click', function (e) {
     e.preventDefault();
-    newsletterCard.classList.toggle('newsletter__signup-card--hidden')
-    successCard.classList.toggle('success-card--show')
+    if(validateEmail(emailValue)){
+        errorBox.textContent = ""
+        newsletterCard.classList.toggle('newsletter__signup-card--hidden');
+        successCard.classList.toggle('success-card--show');
+    } else{
+        errorBox.textContent = "Valid email required"
+    }
 })
 
 dismissButton.addEventListener('click', function (e){
-    newsletterCard.classList.toggle('newsletter__signup-card--hidden')
-    successCard.classList.toggle('success-card--show')
+    newsletterCard.classList.toggle('newsletter__signup-card--hidden');
+    successCard.classList.toggle('success-card--show');
 })
+
+
+
