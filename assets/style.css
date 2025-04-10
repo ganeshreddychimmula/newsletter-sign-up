@@ -1,0 +1,16 @@
+.newsletter__signup-card--hidden{
+ display: none;
+}
+
+.success-card {
+    display: none;
+}
+
+.success-card--show{
+    display: block;
+}
+
+.signup-card__form-email--error{
+    display: inline-block;
+    color: red;
+}   
