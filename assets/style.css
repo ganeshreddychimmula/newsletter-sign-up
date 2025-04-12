@@ -28,7 +28,7 @@
   --red: rgb(255, 97, 85);
 }
 
-.text-preset-1 {
+.text-preset-1-desktop {
   font-size: 56px;
   font-weight: 700;
   line-height: 100%;
@@ -94,6 +94,8 @@ body {
     height: 284px;
     background-image: url("./images/illustration-sign-up-mobile.svg");
     object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .signup-card__form{
@@ -241,4 +243,18 @@ body {
   display: flex;
 }
 
+@media screen and (min-width: 600px) {
+    .newsletter__signup-card{
+        width: 608px;
+        padding: 40px;
+        border-radius: 36px;
+    }
 
+    .signup-card__image{
+        border-radius: 10px;
+    }
+
+    .signup-card__form{
+        padding: 0px;
+    }
+}
