@@ -36,7 +36,7 @@
 }
 
 .text-preset-1-mobile {
-  font-size: 88px;
+  font-size: 40px;
   font-weight: 700;
   line-height: 100%;
   letter-spacing: 0px;
@@ -68,6 +68,140 @@ body {
   width: 100%;
   height: 100%;
   font-family: Roboto;
+  overflow: hidden;
+}
+
+.newsletter{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    justify-items: center;
+    align-items: center;
+    overflow-y: auto;
+    background-color: var(--blue-700);
+}
+
+.newsletter__signup-card{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background-color: var(--white);
+    width: min(100%, 375px);
+}
+
+.signup-card__image{
+    width: 100%;
+    height: 284px;
+    background-image: url("./images/illustration-sign-up-mobile.svg");
+    object-fit: cover;
+}
+
+.signup-card__form{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-inline: 24px;
+    padding-block-end: 44px;
+}
+
+.signup-card__form-details{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    color: var(--blue-800);
+}
+
+.signup-card__form-feature-list{
+    list-style: none;
+    gap: 8px    ;
+}
+
+.signup-card__form-feature {
+    position: relative;
+    width: 100%;
+    padding-left: 37px;
+}
+
+.signup-card__form-feature::before {
+    content: ''; /* Mandatory to display the pseudo-element */
+    position: absolute;
+    left: 0;
+    width: 21px;   /* Width of the SVG icon */
+    height: 21px;  /* Height of the SVG icon */
+    transform: translateY(2px);
+    background-image: url("./images/icon-list.svg");
+    background-size: contain;
+    background-repeat: no-repeat;    
+}
+.signup-card__form-data{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.signup-card__form-email{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.signup-card__form-email-label{
+    color: var(--blue-800);
+}
+
+.signup-card__form-email__error-msg {
+    display: inline-block;
+    color: var(--red);
+  }
+
+
+.signup-card__form-email-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.signup-card__form-email-input{
+    width: 100%;
+    padding: 24px 16px;
+    border-radius: 8px;
+    height: 56px;
+    box-shadow: inset 0 0 0 1px var(--grey);
+    border: none;
+    color: var(--blue-800);
+}
+
+.signup-card__form-email-input:active{
+    box-shadow: inset 0 0 0 1px var(--blue-800);
+}
+
+.signup-card__form-email--error{
+    box-shadow: inset 0 0 0 1px var(--red);
+    color: var(--red);
+    background-color: #FEE2E2;
+}  
+
+.signup-card__form-email-input::placeholder{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0px;
+    color: var(--grey);
+}
+
+.signup-card__form-button{
+    height: 56px;
+    border-radius: 8px;
+    background-color: var(--blue-800);
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0px;
+    border: none;
+}
+
+.signup-card__form-button:active {
+    background: linear-gradient(to right, #FF6A3A, #FF527B);
 }
 
 .newsletter__signup-card--hidden {
@@ -82,7 +216,4 @@ body {
   display: block;
 }
 
-.signup-card__form-email--error {
-  display: inline-block;
-  color: red;
-}
+

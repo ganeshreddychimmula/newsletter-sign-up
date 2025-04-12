@@ -30,30 +30,32 @@
 
         <section class="signup-card__form">
           <header class="signup-card__form-details">
-            <h2 class="signup-card__form-heading">Stay updated!</h2>
-            <p class="signup-card__form-description">
+            <h2 class="signup-card__form-heading text-preset-1-mobile">Stay updated!</h2>
+            <p class="signup-card__form-description text-preset-2-regular">
               Join 60,000+ product managers receiving monthly updates on:
             </p>
             <ul class="signup-card__form-feature-list">
-              <li class="signup-card__form-feature">
+              <li class="signup-card__form-feature text-preset-2-regular">
                 Product discovery and building what matters
               </li>
-              <li class="signup-card__form-feature">
+              <li class="signup-card__form-feature text-preset-2-regular">
                 Measuring to ensure updates are a success
               </li>
-              <li class="signup-card__form-feature">And much more!</li>
+              <li class="signup-card__form-feature text-preset-2-regular">And much more!</li>
             </ul>
           </header>
           <form id="form" class="signup-card__form-data" novalidate>
             <div class="signup-card__form-email">
-              <section class="signup-card__form-email">
-                <label for="email" class="signup-card__form-email-label"
-                  >Email address</label
-                >
+              <section class="signup-card__form-email-header">
+                <label 
+                for="email" 
+                class="signup-card__form-email-label text-preset-3">
+                Email address
+                </label>
                 <span
                   aria-live="polite"
                   id="email-error"
-                  class="signup-card__form-email-error"
+                  class="signup-card__form-email__error-msg text-preset-3"
                 ></span>
               </section>
               <input
@@ -65,7 +67,7 @@
                 placeholder="email@company.com"     
               />
             </div>
-            <button id="signup-button" type="submit" class="signup-card__form-button">
+            <button id="signup-button" type="submit" class="signup-card__form-button" tabindex="0">
               Subscribe to monthly newsletter
             </button>
           </form>
