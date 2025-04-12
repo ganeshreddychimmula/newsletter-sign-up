@@ -67,20 +67,22 @@
                 placeholder="email@company.com"     
               />
             </div>
-            <button id="signup-button" type="submit" class="signup-card__form-button" tabindex="0">
+            <button id="signup-button" type="submit" class="form-button" tabindex="0">
               Subscribe to monthly newsletter
             </button>
           </form>
         </section>
       </article>
       <article class="success-card" role="alert">
-        <img src="" alt="sucess image" />
-        <h1 class="Success-card__heading">Thanks for subscribing!</h1>
-        <p class="Success-card__message">
-          A confirmation email has been sent to ash@loremcompany.com. Please
+        <header class="success-card__header">
+          <img src="./assets/images/icon-success.svg" class="success-icon" alt="sucess image" />
+        <h1 class="success-card__heading text-preset-1-mobile">Thanks for subscribing!</h1>
+        <p class="success-card__message text-preset-2-regular">
+          A confirmation email has been sent to <span class="sub-email">ash@loremcompany.com.</span> Please
           open it and click the button inside to confirm your subscription.
         </p>
-        <button id="dismiss" type="submit" class="success-card__dismiss-button">
+        </header>
+        <button id="dismiss" type="submit" class="form-button">
           Dismiss message
         </button>
       </article>

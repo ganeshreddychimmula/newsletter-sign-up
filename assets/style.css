@@ -188,8 +188,7 @@ body {
     color: var(--grey);
 }
 
-.signup-card__form-button{
-    height: 56px;
+.form-button{
     border-radius: 8px;
     background-color: var(--blue-800);
     color: var(--white);
@@ -198,9 +197,11 @@ body {
     line-height: 150%;
     letter-spacing: 0px;
     border: none;
+    height: 56px;
+    padding-block: 16px;
 }
 
-.signup-card__form-button:active {
+.form-button:active {
     background: linear-gradient(to right, #FF6A3A, #FF527B);
 }
 
@@ -210,10 +211,34 @@ body {
 
 .success-card {
   display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--white);
+  width: min(100%, 400  px);
+  padding: 24px;
+  padding-block: 70px;
+  color: var(--blue-800);
+  height: 100%;
+}
+
+.success-card__header{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.success-icon{
+    height: 64px;
+    width: 64px;
+}
+
+
+.sub-email{
+    font-weight: 700;
 }
 
 .success-card--show {
-  display: block;
+  display: flex;
 }
 
 

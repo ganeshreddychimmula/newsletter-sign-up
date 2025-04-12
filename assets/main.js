@@ -3,6 +3,7 @@ let successCard = document.querySelector(".success-card");
 let signUpButton = document.querySelector("#signup-button");
 let dismissButton = document.querySelector('#dismiss');
 let errorBox = document.querySelector('#email-error');
+let emailSpan = document.querySelector('.sub-email');
 let emailInputElement = document.querySelector('#email');
 let emailValue = "";
 
@@ -24,6 +25,7 @@ signUpButton.addEventListener('click', function (e) {
         errorBox.textContent = ""
         newsletterCard.classList.toggle('newsletter__signup-card--hidden');
         successCard.classList.toggle('success-card--show');
+        emailSpan.innerHTML = emailValue;
         
     } else{
         errorBox.textContent = "Valid email required";
