@@ -47,19 +47,22 @@ emailInputElement.addEventListener('click', function (e){
 
 
 
-function updateClassBasedOnScreenWidth() {
-    const element = document.querySelector('.signup-card__form-details h2');
-    if (element) {
-      if (window.matchMedia('(min-width: 600px)').matches) {
-        element.classList.add('text-preset-1-desktop'); // Replace 'desktop-class' with your desired class
-      } else {
-        element.classList.remove('.text-preset-1-desktop');
-      }
-    }
-  }
+// function updateClassBasedOnScreenWidth() {
+//     let headingElements = document.querySelectorAll('.card-heading');
+//     let isBiggerScreen = window.matchMedia('(min-width: 600px)').matches;
+//     headingElements.forEach((element) => {
+//         if (element) {
+//             if (isBiggerScreen) {
+//               element.classList.add('text-preset-1-desktop'); // Replace 'desktop-class' with your desired class
+//             } else {
+//               element.classList.remove('.text-preset-1-desktop');
+//             }
+//           }
+//     })
+//   }
   
-  // Call the function initially
-  updateClassBasedOnScreenWidth();
+//   // Call the function initially
+//   updateClassBasedOnScreenWidth();
   
-  // Add an event listener for screen width changes
-  window.addEventListener('resize', updateClassBasedOnScreenWidth);
+//   // Add an event listener for screen width changes
+//   window.addEventListener('resize', updateClassBasedOnScreenWidth);

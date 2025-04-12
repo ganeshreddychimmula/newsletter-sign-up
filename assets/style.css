@@ -115,7 +115,9 @@ body {
 
 .signup-card__form-feature-list{
     list-style: none;
-    gap: 8px    ;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .signup-card__form-feature {
@@ -257,4 +259,42 @@ body {
     .signup-card__form{
         padding: 0px;
     }
+
+    .success-card{
+        width: 504px;
+        height: 520px;
+        border-radius: 36px;
+        padding: 64px;
+        gap:32px;
+    }
+
+    .card-heading{
+        font-size: 56px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .newsletter__signup-card{
+        flex-direction: row-reverse;
+        height: 641px;
+        padding-inline: 32px;
+        padding-block: 24px;
+        border-radius: 36px;
+        gap: 64px;
+        width: fit-content;
+    }
+
+    .signup-card__image{
+        background-image: url("./images/illustration-sign-up-desktop.svg");
+        width: 400px;
+        height: 100%;
+    }
+
+    .signup-card__form{
+        padding: 0px;
+        align-self: center;
+        width: 376px;
+    }
+
+
 }
