@@ -205,7 +205,7 @@ body {
     padding-block: 16px;
 }
 
-.form-button:active {
+.form-button:active, .form-button:hover {
     background: linear-gradient(to right, #FF6A3A, #FF527B);
     border: none;
 }
