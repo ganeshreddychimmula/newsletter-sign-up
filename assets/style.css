@@ -207,6 +207,7 @@ body {
 
 .form-button:active {
     background: linear-gradient(to right, #FF6A3A, #FF527B);
+    border: none;
 }
 
 .newsletter__signup-card--hidden {
@@ -218,7 +219,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   background-color: var(--white);
-  width: min(100%, 400  px);
+  width: min(100%, 400px );
   padding: 24px;
   padding-block: 70px;
   color: var(--blue-800);
