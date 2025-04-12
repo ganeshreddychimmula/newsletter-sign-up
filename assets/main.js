@@ -24,7 +24,7 @@ signUpButton.addEventListener('click', function (e) {
         errorBox.textContent = ""
         newsletterCard.classList.toggle('newsletter__signup-card--hidden');
         successCard.classList.toggle('success-card--show');
-        emailInputElement.classList.remove('signup-card__form-email--error')
+        
     } else{
         errorBox.textContent = "Valid email required";
         emailInputElement.classList.add('signup-card__form-email--error')
@@ -37,6 +37,11 @@ dismissButton.addEventListener('click', function (e){
     emailInputElement.value = "";
     emailValue = ""
 })
+
+emailInputElement.addEventListener('click', function (e){
+    errorBox.textContent = ""
+    emailInputElement.classList.remove('signup-card__form-email--error');
+});
 
 
 
